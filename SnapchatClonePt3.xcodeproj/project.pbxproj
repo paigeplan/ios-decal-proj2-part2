@@ -137,6 +137,7 @@
 		3CE750741E7E7D540076B31F /* SnapchatClonePt3 */ = {
 			isa = PBXGroup;
 			children = (
+				3CE8EC0B1E7F15FE008108BB /* Auth */,
 				3CE8EBFF1E7E7EF9008108BB /* Choose Thread */,
 				3CE8EC001E7E7F04008108BB /* Model */,
 				3CE8EC011E7E7F0F008108BB /* App Utilities */,
@@ -148,7 +149,6 @@
 				3CE7507E1E7E7D540076B31F /* LaunchScreen.storyboard */,
 				3CE750811E7E7D540076B31F /* Info.plist */,
 				3CE8EC051E7E80C8008108BB /* GoogleService-Info.plist */,
-				3CE8EC0B1E7F15FE008108BB /* Auth */,
 			);
 			path = SnapchatClonePt3;
 			sourceTree = "<group>";
