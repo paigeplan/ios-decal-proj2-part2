@@ -89,6 +89,8 @@ You'll also need to finish the `viewWillAppear` function as well as the `didSele
 And that's it! If everything works at this point, you should be able to both see your classmates pictures and share your own. You've now made a working clone of Snapchat!
 
 ## Grading ##
+Though submissions are graded through Gradescope, you are encouraged to fork this repo and make commits to your own forked repository (especially if you are new to Git!). Instructions to do this can be found [here](https://help.github.com/articles/fork-a-repo/) (you can also ask a TA for help doing this!)
+
 To submit, please upload your code to either GitHub or Bitbucket, and use the "Github" or "Bitbucket" submission feature on Gradescope (we've experienced the fewest amount of bugs with students who have submitted this way).
 
 Alternatively you can submit your project as a zip folder. To do this please open your ios-decal-proj2-part2 folder in finder, and compress the contents inside (not the folder itself). This should generate a file, Archive.zip, that you can submit to Gradescope. Please test that you uploaded correctly by downloading your submission, and testing that downloaded version in Xcode.
