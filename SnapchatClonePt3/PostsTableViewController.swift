@@ -9,7 +9,6 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
-import SDWebImage
 import MBProgressHUD
 
 class PostsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -19,7 +18,9 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         static let postPhotoSize = UIScreen.main.bounds
     }
     
+    // Dictionary that maps IDs of images to the actual UIImage data
     var loadedImagesById: [String:UIImage] = [:]
+    
     
     let currentUser = CurrentUser()
     
@@ -30,7 +31,6 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var postImageViewButton: UIButton = {
         var button = UIButton(frame: Constants.postPhotoSize)
         button.backgroundColor = Constants.postBackgroundColor
-        // since we only want the button to appear when the user taps a cell, hide the button until a cell is tapped
         button.isHidden = true
         return button
     }()
@@ -40,41 +40,38 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         postTableView.delegate = self
         postTableView.dataSource = self
-        // add the button that displays the selected post's image to this view
         view.addSubview(postImageViewButton)
         
-        // By adding a target here, every time the button is pressed, hidePostImage will be called 
-        // (this is the programmatic way of adding an IBAction to a button)
         postImageViewButton.addTarget(self, action: #selector(self.hidePostImage(sender:)), for: UIControlEvents.touchUpInside)
         
     }
-    
+    /*
+        TODO:
+        Call the function to retrieve data for our tableview. 
+        (Hint): This should be pretty simple.
+    */
     override func viewWillAppear(_ animated: Bool) {
-        updateData()
+        // YOUR CODE HERE
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    /*
+        TODO:
+        Use the 'getPosts' function to retrieve all of the posts in the database. You'll need to pass in the currentUser property declared above so that we know if the posts have been read or not.
+        Using the posts variable that is returned, do the following:
+        - First clear the current dictionary of posts (in case we're reloading this feed again). You can do this by calling the 'clearThreads' function.
+        - For each post in the array:
+            - Add the post to the thread using the 'addPostToThread' function
+            - Using the postImagePath property of the post, retrieve the image data from the storage module (there is a function in ImageFeed.swift that does this for you already).
+            - Create a UIImage from the data and add a new element to the 'loadedImagesById' variable using the image and post ID. 
+        - After iterating through all the posts, reload the tableview.
+     
+    */
     func updateData() {
-        getPosts(user: currentUser) { (posts) in
-            if let posts = posts {
-                clearThreads()
-                for post in posts {
-                    addPostToThread(post: post)
-                    getDataFromPath(path: post.postImagePath, completion: { (data) in
-                        if let data = data {
-                            if let image = UIImage(data: data) {
-                                self.loadedImagesById[post.postId] = image
-                            }
-                        }
-                    })
-                }
-                self.postTableView.reloadData()
-            }
-        }
+        // YOUR CODE HERE
     }
     
     // MARK: Custom methods (relating to UI)
@@ -140,12 +137,15 @@ class PostsTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return threads[threadName]!.count
     }
     
+    
+    // TODO: add the selected post as one of the current user's read posts
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let post = getPostFromIndexPath(indexPath: indexPath), !post.read {
             presentPostImage(forPost: post)
             post.read = true
-            currentUser.addNewReadPost(postID: post.postId)
-            // reload the cell that the user tapped so the unread/read image updates
+            
+            // YOUR CODE HERE
+            
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
      

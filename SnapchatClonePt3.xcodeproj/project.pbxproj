@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C0E5EFF1E7F2EBE00F7CD4F /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0E5EFE1E7F2EBE00F7CD4F /* CurrentUser.swift */; };
+		3C4AA6E31E831E6800EADC02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AA6E21E831E6800EADC02 /* Constants.swift */; };
 		3CE750761E7E7D540076B31F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE750751E7E7D540076B31F /* AppDelegate.swift */; };
 		3CE7507B1E7E7D540076B31F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE750791E7E7D540076B31F /* Main.storyboard */; };
 		3CE7507D1E7E7D540076B31F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE7507C1E7E7D540076B31F /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		0926D8EC80A6E276BA9FEA56 /* Pods-SnapchatClonePt3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatClonePt3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapchatClonePt3/Pods-SnapchatClonePt3.debug.xcconfig"; sourceTree = "<group>"; };
 		2F44AFC87DA71B62C85089D6 /* Pods_SnapchatClonePt3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatClonePt3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0E5EFE1E7F2EBE00F7CD4F /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		3C4AA6E21E831E6800EADC02 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3CE750721E7E7D540076B31F /* SnapchatClonePt3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapchatClonePt3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE750751E7E7D540076B31F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE7507A1E7E7D540076B31F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				3CE750A61E7E7D970076B31F /* ImageFlowLayout.swift */,
 				3CE750751E7E7D540076B31F /* AppDelegate.swift */,
+				3C4AA6E21E831E6800EADC02 /* Constants.swift */,
 			);
 			name = "App Utilities";
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				3CE750761E7E7D540076B31F /* AppDelegate.swift in Sources */,
 				3CE750B01E7E7D970076B31F /* ImagePickerViewController.swift in Sources */,
 				3CE750B31E7E7D970076B31F /* PostsTableViewController.swift in Sources */,
+				3C4AA6E31E831E6800EADC02 /* Constants.swift in Sources */,
 				3CE8EC081E7F0DD2008108BB /* LoginViewController.swift in Sources */,
 				3C0E5EFF1E7F2EBE00F7CD4F /* CurrentUser.swift in Sources */,
 			);

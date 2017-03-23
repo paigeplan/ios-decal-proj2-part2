@@ -119,7 +119,6 @@ class ImagePickerViewController: UIViewController, AVCapturePhotoCaptureDelegate
     @IBAction func takePhoto(_ sender: UIButton) {
         // students need to add write this part
         let settingsForMonitoring = AVCapturePhotoSettings()
-        //settingsForMonitoring.flashMode = .auto
         settingsForMonitoring.isAutoStillImageStabilizationEnabled = true
         settingsForMonitoring.isHighResolutionPhotoEnabled = false
         photoOutput.capturePhoto(with: settingsForMonitoring, delegate: self)

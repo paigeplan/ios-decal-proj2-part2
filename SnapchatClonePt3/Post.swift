@@ -29,18 +29,12 @@ class Post {
     /// The ID of the post, generated automatically on Firebase
     let postId: String
     
-    /// Designated initializer for posts
-    ///
-    /// - Parameters:
-    ///   - username: The name of the user making the post
-    ///   - postImage: The image that will show up in the post
-    ///   - thread: The thread that the image should be posted to
     init(id: String, username: String, postImagePath: String, thread: String, dateString: String, read: Bool) {
         self.postImagePath = postImagePath
         self.username = username
         self.thread = thread
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.A"
+        dateFormatter.dateFormat = dateFormat
         self.date = dateFormatter.date(from: dateString)!
         self.read = read
         self.postId = id
