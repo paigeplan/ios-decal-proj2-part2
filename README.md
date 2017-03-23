@@ -21,11 +21,23 @@ Also very important:
 One more quick note:
 Almost every function that you need to implement for this project involves the use of closures. If you're not clear on how those work, you should definitely review the lecture slides again before attempting to do anything.
 
-## Getting Started 
+## Downloading the Project ##
 
-First, clone the project repository onto your computer:
+For this project, we will be requiring everyone to submit via the GitHub submission method on Gradescope.
 
-    git clone https://github.com/iosdecal/ios-decal-proj2-part2.git
+Instead of downloading the lab as a zip, you'll need to create a new repository for your changes. You can do this by tapping on "Fork" in the top right of this page. Then open up your terminal, navigate to the directory you want to put your project in (i.e. `cd Desktop`), and clone your repository using the following command (replace YOUR-USERNAME with your github username). 
+	
+	git clone https://github.com/YOUR-USERNAME/ios-decal-proj2-part2
+
+This will create a repository on your computer that you can commit and push your changes to (it's good practice to do this frequently). When you are done with the project make sure you add all of your files to your repository, and push the changes. You can do this using the following commands in your `ios-decal-proj2-part2` folder (type `cd ios-decal-proj2-part2` into terminal to get into the directory if you are not yet in it)
+
+	git add .
+	git commit -m "Finished Project 2-2!"
+	git push origin master
+	
+Once you have done this, you can view the files you pushed at https://github.com/YOUR-USERNAME/ios-decal-proj2-part2. You can then use this repository to submit via Gradescope when you are finished (see the **Submission** section below).
+
+## Getting Started ##
 
 For this part of the project, it's ok if you weren't able to successfully implement the camera or feed - this is taken care of for you. 
 
@@ -89,8 +101,8 @@ You'll also need to finish the `viewWillAppear` function as well as the `didSele
 And that's it! If everything works at this point, you should be able to both see your classmates pictures and share your own. You've now made a working clone of Snapchat!
 
 ## Grading ##
-Though submissions are graded through Gradescope, you are encouraged to fork this repo and make commits to your own forked repository (especially if you are new to Git!). Instructions to do this can be found [here](https://help.github.com/articles/fork-a-repo/) (you can also ask a TA for help doing this!)
+Once you have finished, please submit your files to [Gradescope](https://gradescope.com/courses/5482). You will need to submit files EVEN if you are being checked off, since Gradescope does not support submission-less grading at the moment. We have enabled group submission for this assignment, so make sure to include your partner's name if you only worked on one computer.
 
-To submit, please upload your code to either GitHub or Bitbucket, and use the "Github" or "Bitbucket" submission feature on Gradescope (we've experienced the fewest amount of bugs with students who have submitted this way).
+To submit, please upload your code to either GitHub or Bitbucket, and use the "Github" or "Bitbucket" submission feature on Gradescope (we've experienced the fewest amount of bugs with students who have submitted this way). Please check out the [slides in Lecture 3](http://iosdecal.com/Lectures/Lecture3.pdf) for step-by-step submission instructions if you're confused about how to do this (or ask a TA!)
 
-Alternatively you can submit your project as a zip folder. To do this please open your ios-decal-proj2-part2 folder in finder, and compress the contents inside (not the folder itself). This should generate a file, Archive.zip, that you can submit to Gradescope. Please test that you uploaded correctly by downloading your submission, and testing that downloaded version in Xcode.
+If you are unable to submit via GitHub you can submit your lab as a zip folder (**Note: there will a very good chance we will need to e-mail you asking you to re-submit due to Gradescope zip submission bugs**). To do this please open your ios-decal-proj2-part2 folder, and compress the contents inside (not the folder itself). This should generate a file, **Archive.zip**, that you can submit to Gradescope.
